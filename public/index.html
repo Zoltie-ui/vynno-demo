@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vynno 智储 · 把期待慢慢存起来</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="Vynno 首页"><span class="brand-mark">v</span><span>vynno<span class="brand-cn">智储</span></span></a>
+  <div class="workspace-label">我的财务空间</div>
+  <nav aria-label="主导航">
+    <button class="nav active" data-page="overview"><span>◈</span>储蓄总览</button>
+    <button class="nav" data-page="goals"><span>◎</span>我的目标</button>
+    <button class="nav" data-page="collection"><span>✧</span>数字藏品馆</button>
+    <button class="nav" data-page="account"><span>☷</span>我的账户</button>
+  </nav>
+  <div class="sidebar-note"><span>✳</span><strong>每一小步，都在靠近</strong><p>为喜欢的生活攒一点底气。</p></div>
+  <div class="user"><div class="avatar">Y</div><div><strong>逐梦储蓄家</strong><small>本地体验账户</small></div><span class="online-dot"></span></div>
+</aside>
+<main>
+  <header><div class="breadcrumb">我的财务空间 <span>/</span> <b id="page-label">储蓄总览</b></div><span class="demo-label"><i></i> 交互原型 · 模拟资金</span></header>
+  <div class="content">
+    <section id="page-overview" class="page">
+      <div class="page-title"><div><div class="eyebrow">A LITTLE TODAY, A LOT TOMORROW</div><h1>把期待，慢慢存起来<span> ✳</span></h1><p>不用一下子做到很多，今天也可以向心愿靠近一点。</p></div><button class="button dark" data-action="new-goal">＋ 创建新目标</button></div>
+      <div class="dashboard-grid">
+        <div class="dashboard-main">
+          <section class="balance-card"><div class="balance-heading"><span>我的心愿储蓄</span><span class="light-tag">模拟账户</span></div><div class="balance-value">¥ <strong id="total-saved">0.00</strong></div><p>每一笔积累，都是送给未来自己的礼物。</p><div class="balance-bottom"><div><span>正在进行</span><strong id="active-count">0 <small>个目标</small></strong></div><div><span>已完成任务</span><strong id="task-count">0 <small>次</small></strong></div><div class="balance-motif" aria-hidden="true">✳</div></div></section>
+          <section class="section"><div class="section-heading"><h2>我的储蓄目标 <small id="goal-count"></small></h2><button class="text-button" data-page="goals">查看全部 ↗</button></div><div id="overview-goals" class="goal-list"></div></section>
+          <section class="tip-strip"><span>☀</span><div><strong>存钱，也要给快乐留一点位置</strong><p>先照顾好必要支出和应急资金，再开始今天的小任务。</p></div><button class="text-button" data-prompt="帮我分析一下储蓄预算">和 Vynno 聊聊 ↗</button></section>
+        </div>
+        <div class="dashboard-side">
+          <section class="blind-card"><div class="section-heading"><h2>今日储蓄盲盒</h2><span class="tiny-tag">每天一小步</span></div><div class="gift-stage" aria-hidden="true"><span class="spark spark-one">✦</span><div class="gift"><div class="gift-lid"></div><div class="gift-body"><span>v</span></div><div class="gift-ribbon"></div></div><span class="spark spark-two">✧</span><div class="gift-shadow"></div></div><h3 id="box-title">今天，会遇见什么小惊喜？</h3><p id="box-description">金额在你的预算内，节奏由你决定。</p><select id="task-goal" aria-label="选择储蓄任务目标"></select><button id="draw-button" class="button lime" data-action="draw">打开今日盲盒 <span>↗</span></button><div id="task-actions" hidden><button class="button dark" data-action="complete">确认完成模拟储蓄</button><button class="text-button" data-action="skip">今天先跳过</button></div><small class="box-footnote">免费抽取 · 随时跳过 · 不涉及真实扣款</small></section>
+          <section class="collection-preview"><div><span class="eyebrow">YOUR LITTLE TROPHIES</span><h3>收藏努力的每个瞬间</h3><p>完成任务，收获专属纪念徽章。</p><button class="text-button" data-page="collection">走进藏品馆 ↗</button></div><div class="mini-orb" aria-hidden="true">✧</div></section>
+        </div>
+      </div>
+    </section>
+    <section id="page-goals" class="page" hidden><div class="page-title"><div><div class="eyebrow">MAKE ROOM FOR YOUR DREAMS</div><h1>每个心愿，都值得计划</h1><p>设定可承受的预算，再按自己的节奏实现。</p></div><button class="button dark" data-action="new-goal">＋ 创建新目标</button></div><div id="all-goals" class="all-goals"></div></section>
+    <section id="page-collection" class="page" hidden><div class="page-title"><div><div class="eyebrow">A COLLECTION OF YOUR EFFORTS</div><h1>数字藏品馆 <span>✧</span></h1><p>记录你付出的努力。这里的收藏是本地数字纪念，不可交易、未上链。</p></div></div><div id="collection-grid" class="collection-grid"></div></section>
+    <section id="page-account" class="page" hidden><div class="page-title"><div><div class="eyebrow">YOUR SPACE, YOUR PACE</div><h1>我的账户</h1><p>管理演示记录与模型连接状态。</p></div></div><section class="account-card"><h2>体验与数据</h2><p>目标、对话和模拟记录保存在此浏览器的本地存储中，未连接银行或社交平台。请使用虚构数据体验。</p><p id="connection-status">正在检查模型连接…</p><p>接入模型后，发送消息时会将最近对话和目标摘要发给你配置的模型服务。</p><div class="account-actions"><button class="button dark" data-action="export">导出我的记录</button><button class="button outline" data-action="reset">清空本地数据</button></div><h3>原型能力</h3><p>对话式目标草稿、预算可行性检查、预算内随机任务、24小时有效期、模拟储蓄、纪念收藏与进度回顾。</p><h3>后续接入</h3><p>银行存款与身份认证、真实通知、AIGC形象生成及社交社区，需要独立服务与授权。本原型未开通收益计算和金融产品销售。</p></section></section>
+    <footer>VYNNO 智储 <span>让储蓄有期待，让生活有余地。</span><small>本原型仅供产品演示</small></footer>
+  </div>
+</main>
+<button id="chat-launch" aria-label="打开 Vynno 财务陪伴"><span>✳</span><div>Vynno 财务搭子<small id="chat-mode">本地规则演示</small></div><b>↗</b></button>
+<section id="chat-panel" hidden aria-label="Vynno 财务对话"><div class="chat-header"><div class="agent-avatar">✳</div><div><strong>Vynno 财务搭子</strong><small id="chat-status">随时听你说</small></div><button class="icon-button" id="close-chat" aria-label="关闭对话">×</button></div><div class="chat-notice">支持目标规划与财务陪伴 · 资金操作均为模拟</div><div id="messages" aria-live="polite"></div><div class="chat-chips"><button data-prompt="我想90天存3000元去旅行">创建旅行目标</button><button data-prompt="最近存钱有点压力">存钱有点压力</button></div><form id="chat-form"><label class="sr-only" for="chat-input">发给 Vynno 的消息</label><input id="chat-input" maxlength="2000" placeholder="说说你的小目标…" autocomplete="off"><button aria-label="发送消息" id="send-chat">↑</button></form></section>
+<dialog id="goal-dialog"><form id="goal-form"><div class="modal-heading"><div><div class="eyebrow">ONE DREAM AT A TIME</div><h2>给心愿一个计划</h2></div><button type="button" class="icon-button" data-action="close-goal" aria-label="关闭">×</button></div><p class="modal-description">先留下生活费和应急资金，再安排储蓄预算。</p><label>目标名称<input name="name" required maxlength="60" placeholder="比如：去看一次海"></label><div class="form-row"><label>目标金额（元）<input name="target" required type="number" min="0.01" max="1000000" step="0.01" placeholder="3000"></label><label>储蓄期限（天）<input name="days" required type="number" min="1" max="3650" step="1" placeholder="90"></label></div><div class="form-row"><label>单次最多存（元）<input name="max" required type="number" min="0.01" max="1000000" step="0.01" placeholder="50"></label><label>月度可储蓄预算（元）<input name="budget" required type="number" min="0.01" max="1000000" step="0.01" placeholder="1200"></label></div><label>心愿主题<select name="theme"><option value="ocean">海边旅行</option><option value="music">音乐现场</option><option value="digital">数码心愿</option><option value="reserve">应急储备</option><option value="life">生活小确幸</option></select></label><div class="priority-note">多目标共享预算：系统会检查所有进行中目标的预计月需求之和，是否超过你填写的月度总预算。</div><div id="plan-result" role="status" hidden></div><button id="goal-submit" type="submit" class="button dark full">检查计划</button></form></dialog>
+<dialog id="reward-dialog"><div class="reward-content"><div class="reward-star">✦</div><div class="eyebrow">A SMALL WIN IS STILL A WIN</div><h2 id="reward-title">今天的努力，收藏好了</h2><p id="reward-text"></p><button class="button dark" data-action="close-reward">继续我的储蓄旅程</button></div></dialog>
+<div id="toast" role="status" hidden></div>
+<script src="/app.js" defer></script>
+</body></html>
