@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: vynno-demo
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: VYNNO_HOST
+        value: 0.0.0.0
+      - key: PYTHON_VERSION
+        value: 3.11.11
